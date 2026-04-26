@@ -1,0 +1,30 @@
+---
+title: "Project Track: Finance Returns & Volatility"
+subtitle: "DSE6066: Applied Business Forecasting"
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+---
+
+## 📈 Business Context
+In asset management, the ability to forecast point returns is notoriously difficult ("The Efficient Market Hypothesis"). However, forecasting **Volatility** (risk) is often more feasible and just as critical for portfolio construction. This track challenges you to apply rigorous statistical methods to financial time series.
+
+## 📊 The Data
+You will use the dataset from the **M6 Financial Forecasting Competition**, which focuses on a diverse set of 100 assets (ETFs and Stocks).
+- **Source**: [M6 Competition Assets](https://m6competition.com/) or Yahoo Finance (`yfinance` library).
+- **Period**: Focus on the most recent 5–10 years of monthly log-returns.
+
+## 🛠️ Technical Requirements
+In addition to the core project requirements, your analysis must address:
+1.  **Zero-Mean / Stationary Assumption**: Financial returns are often stationary by nature. Perform an **ADF test** to confirm stationarity and discuss the "Random Walk" benchmark.
+2.  **Risk Analysis**: Calculate the **Standard Deviation** of your forecast errors. How "certain" is your model?
+3.  **The "Shrinkage" Concept**: Discuss why simple averages (Mean models) often outperform complex models in financial return forecasting due to high noise.
+
+## 📑 Professional References
+- [fpppy: Forecasting financial time series](https://otexts.com/fpppy/nbs/12-advanced.html#forecasting-financial-time-series)
+- [The M6 Competition Paper (Makridakis et al.)](https://m6competition.com/WhitePaper)
+
+::: {.businessbox}
+**Industry Insight**: Leading hedge funds often care more about the *rank* of asset returns (which one will do better) than the absolute percentage, as it drives long/short equity strategies.
+:::

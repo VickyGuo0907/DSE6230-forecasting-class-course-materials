@@ -1,0 +1,30 @@
+---
+title: "Project Track: Retail ROI & Marketing Spikes"
+subtitle: "DSE6066: Applied Business Forecasting"
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+---
+
+## 🛒 Business Context
+Retailers operate on thin margins. A successful marketing campaign can double sales, but only if the store is prepared with enough staff and inventory. This track focuses on the intersection of **Demand Forecasting** and **Marketing Analytics**.
+
+## 📊 The Data
+You will use sales data from over 1,000 **Rossmann Drug Stores** across Europe.
+- **Source**: [Rossmann Store Sales (Kaggle)](https://www.kaggle.com/competitions/rossmann-store-sales)
+- **Primary Series**: Daily `Sales` and `Customers` for each store.
+
+## 🛠️ Technical Requirements
+In addition to the core project requirements, your analysis must address:
+1.  **Promotional Lag**: Use **Regression (TSLM)** or **SARIMAX** to model the impact of the `Promo` and `Promo2` variables. Does a promotion today impact sales tomorrow?
+2.  **Competitor Proximity**: The data includes a `CompetitionDistance` variable. How does the presence of a nearby competitor change the "baseline" forecast for a store?
+3.  **Store Openings/Closures**: Handle the `Open` flag carefully—forecasting sales for a closed store is a common data pitfall.
+
+## 📑 Professional References
+- [fpppy: Forecasting with external predictors](https://otexts.com/fpppy/nbs/07-regression.html)
+- [Rossmann Corporate Profile (For Context)](https://www.rossmann.de/en/company)
+
+::: {.businessbox}
+**Industry Insight**: High-end retailers use "Cannibalization" models to ensure that a promotion on Brand A doesn't simply steal sales from Brand B, leading to zero net profit gain.
+:::

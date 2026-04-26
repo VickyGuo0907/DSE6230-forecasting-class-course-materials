@@ -1,0 +1,50 @@
+---
+title: "Lab 6: Probabilistic Forecasting & Risk"
+subtitle: "DSE6066: Applied Business Forecasting"
+
+due-date: "August 18, 2026"
+format:
+  html:
+    toc: true
+    code-fold: show
+---
+
+# 🎯 Objective
+In this lab, you will transition from generating single point estimates to producing and evaluating **probabilistic forecasts**. You will learn how to quantify uncertainty and translate statistical ranges into business decisions.
+
+# 🛠️ Setup
+```python
+import pandas as pd
+import numpy as np
+from statsforecast import StatsForecast
+from statsforecast.models import AutoETS, AutoARIMA
+```
+
+# 📈 Task 1: Generating Prediction Intervals
+Using a dataset of your choice (e.g., energy demand or retail sales), fit an **AutoETS** model.
+
+1. Generate forecasts for a 12-month horizon.
+2. Ensure you include **80% and 95% prediction intervals**.
+3. Plot the results using `StatsForecast.plot`.
+
+# 🧪 Task 2: Evaluating the Distribution
+Forecasts are only useful if their uncertainty is well-calibrated. 
+
+1. Perform a **backtest** (rolling-origin cross-validation) on your data.
+2. Calculate the **Coverage** of your intervals: How often did the actual value fall within the 80% interval?
+3. If the actual coverage is only 60%, what does that tell you about your model?
+
+# 💼 Task 3: Prescriptive Analysis (What-If)
+Imagine you are an inventory manager. An under-forecast (stockout) costs \$10 per unit in lost revenue, while an over-forecast (excess inventory) costs \$2 per unit in holding costs.
+
+1. Use the **90th percentile** of your forecast distribution as your "Order Level."
+2. Calculate the "Safety Stock" (The difference between your 90th percentile forecast and the mean forecast).
+3. **Synthesis**: Write a 1-paragraph recommendation to an executive explaining why ordering based on the *mean* forecast might be financially riskier than ordering based on the *90th percentile*.
+
+# 📤 Submission
+Submit your rendered notebook showing all plots and your prescriptive synthesis.
+
+## Grading Rubric
+- **Correctness (40%)**: Does the code run and produce the expected output?
+- **Code Quality (30%)**: Is the code clean, commented, and efficient?
+- **Analysis (30%)**: Are the interpretations and explanations clear and accurate?

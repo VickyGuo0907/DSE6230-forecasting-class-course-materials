@@ -1,0 +1,67 @@
+---
+title: "Lab 4: Machine Learning for Forecasting"
+subtitle: "DSE6066: Applied Business Forecasting"
+due-date: "2026-06-03"
+format: 
+  html:
+    toc: true
+    code-fold: false
+jupyter: python3
+---
+
+## 🛠️ Overview
+This lab focuses on using Machine Learning (XGBoost/LightGBM) and Facebook Prophet for forecasting. You will use `mlforecast` and `statsforecast` from Nixtla.
+
+1.  **Feature Engineering**: Lags, Rolling Windows, Date Features.
+2.  **XGBoost**: Training a Gradient Boosted Tree.
+3.  **Prophet**: Training an Additive Model.
+4.  **Evaluation**: Compare ML vs Prophet.
+
+---
+
+## Part 1: Self-Guided Exercises
+
+### Setup
+```{python}
+import pandas as pd
+from mlforecast import MLForecast
+from mlforecast.target_transforms import Differences
+from statsforecast import StatsForecast
+from statsforecast.models import Prophet
+from xgboost import XGBRegressor
+from datasetsforecast.m4 import M4
+```
+
+### Exercise 1.1: Feature Engineering
+**Instruction**: Initialize an `MLForecast` object with:
+-   `models`: `[XGBRegressor()]`
+-   `freq`: 'D'
+-   `lags`: [1, 7, 14]
+-   `lag_transforms`: {1: [window_ops.mean]} (Use Rolling Mean of window 7) *Note: Import window_ops first if needed, or skip transforms for basic check.*
+
+```{python}
+# Your Code Here
+# fcst = MLForecast(...)
+```
+
+### Exercise 1.2: Prophet
+**Instruction**: Use `StatsForecast` to fit a `Prophet` model to a sample dataset (create a dummy df if needed).
+
+```{python}
+# Your Code Here
+# sf = StatsForecast(models=[Prophet()], freq='D')
+```
+
+---
+
+## Part 2: Case Study
+Download the **M4 Hourly** dataset (or a subset).
+1.  Train an XGBoost model using `mlforecast`.
+2.  Train a Prophet model using `statsforecast`.
+3.  Compare their MAE on a 48-hour horizon.
+4.  **Analysis**: Which model was faster? Which was more accurate? Why?
+
+## Grading Rubric
+- **Correctness (40%)**: Does the code run?
+- **Code Quality (30%)**: Is the feature engineering step clear?
+- **Analysis (30%)**: Comparison of XGBoost vs Prophet.

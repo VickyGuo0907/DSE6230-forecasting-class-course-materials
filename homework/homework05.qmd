@@ -1,0 +1,42 @@
+---
+title: "Lab 5: Deep Learning & Global Models"
+subtitle: "DSE6066: Applied Business Forecasting"
+due-date: "2026-06-10"
+format: 
+  html:
+    toc: true
+    code-fold: false
+jupyter: python3
+---
+
+## 🛠️ Overview
+In this lab, you will explore **Global Models** using `neuralforecast`. You will train a single Deep Learning model (N-BEATS or NHITS) across multiple time series simultaneously.
+
+1.  **Data Prep**: Loading Panel Data (Long format).
+2.  **Model Training**: NHITS / N-BEATS.
+3.  **Zero-Shot**: (Optional) Testing TimeGPT.
+
+---
+
+## Part 1: The Global Model
+Use the `AirPassengers` or `M4` dataset (subset of 10 series).
+
+### Exercise 1.1: Load Data
+Load a dataset containing at least 5 different time series. Ensure columns are `unique_id`, `ds`, `y`.
+
+### Exercise 1.2: Train NHITS
+Initialize and fit an `NHITS` model with `input_size=2*horizon` and `h=horizon`.
+
+```{python}
+from neuralforecast.models import NHITS
+from neuralforecast import NeuralForecast
+# Your code
+```
+
+### Exercise 1.3: Compare to ARIMA
+Why might NHITS outperform (or underperform) ARIMA on this specific dataset? Discuss "Transfer Learning" (information sharing across series).
+
+## Grading Rubric
+- **Correctness (40%)**: Does the DL pipeline run without errors?
+- **Code Quality (30%)**: Proper data formatting (`unique_id`).
+- **Analysis (30%)**: Understanding of Local vs Global modeling.

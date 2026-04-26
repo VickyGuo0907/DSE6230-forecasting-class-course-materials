@@ -1,0 +1,135 @@
+---
+title: "Lab 2: Decomposition & Features"
+subtitle: "DSE6066: Applied Business Forecasting"
+
+date: today
+format: 
+  html:
+    toc: true
+jupyter: python3
+---
+
+## 🛠️ Overview
+Practice decomposing Time Series into Trend, Seasonal, and Residual components.
+
+## Part 1: Self-Guided Exercises
+
+### Setup
+We will use the `statsmodels` library for decomposition and synthetic data for feature extraction.
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import MSTL, seasonal_decompose
+from statsmodels.tsa.tsatools import add_trend
+
+# Load airline data for decomposition
+url = 'https://raw.githubusercontent.com/jbrownlee/Datasets/master/airline-passengers.csv'
+airline = pd.read_csv(url, parse_dates=['Month'], index_col='Month')
+airline.index.freq = 'MS' # Monthly start
+```
+
+### Exercise 1.1: Classical Decomposition (Additive vs Multiplicative)
+**Instruction**: Perform a **multiplicative** decomposition on the `airline` dataset. Store the result in `decomp_mult`. Notice how the seasonal component's magnitude varies with the trend.
+
+```{python}
+# Your Code Here
+# decomp_mult = ...
+```
+
+**Check your work**:
+```{python}
+try:
+    assert 'decomp_mult' in locals(), "Variable 'decomp_mult' missing."
+    assert decomp_mult.model == 'multiplicative', "Model should be multiplicative."
+    print("✅ Exercise 1.1 Passed!")
+except Exception as e:
+    print(f"❌ Exercise 1.1 Failed: {e}")
+```
+
+### Exercise 1.2: MSTL Decomposition
+**Instruction**: The `airline` data has a clear monthly seasonality (period=12). Use `MSTL` from `statsmodels` to decompose the data. Store the result in `mstl_fit`.
+
+```{python}
+# Your Code Here
+# mstl_fit = MSTL(airline['Passengers'], periods=(12,)).fit()
+```
+
+**Check your work**:
+```{python}
+try:
+    assert 'mstl_fit' in locals(), "Variable 'mstl_fit' missing."
+    assert hasattr(mstl_fit, 'seasonal'), "Result should have seasonal component."
+    print("✅ Exercise 1.2 Passed!")
+except Exception as e:
+    print(f"❌ Exercise 1.2 Failed: {e}")
+```
+
+### Exercise 1.3: Feature Extraction (Strength of Trend)
+**Instruction**: Calculate the "Strength of Trend" feature for the `airline` data using the `mstl_fit` result.
+The formula is $F_T = \max\left(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(T_t + R_t)}\right)$, where $R_t$ is the remainder and $T_t$ is the trend.
+Assign the result to `trend_strength`.
+
+```{python}
+# Your Code Here
+# trend = mstl_fit.trend
+# resid = mstl_fit.resid
+# trend_strength = ...
+```
+
+**Check your work**:
+```{python}
+try:
+    assert 'trend_strength' in locals(), "Variable 'trend_strength' missing."
+    assert 0 <= trend_strength <= 1, "Strength should be between 0 and 1."
+    print(f"✅ Exercise 1.3 Passed! Trend Strength: {trend_strength:.4f}")
+except Exception as e:
+    print(f"❌ Exercise 1.3 Failed: {e}")
+```
+
+## Part 2: Textbook Exercises
+
+Complete the following exercises from *Forecasting: Principles and Practice, the Pythonic Way*.
+
+### Chapter 3: Time Series Decomposition
+
+#### Question 3.1
+> Consider the GDP information in `global_economy`. Plot the GDP per capita for each country over time. Which country has the highest GDP per capita? How has this changed over time?
+
+#### Question 3.2
+> For each of the following series, make a graph of the data. If transforming seems appropriate, do so and describe the effect: United States GDP from `global_economy`, Slaughter of Victorian “Bulls, bullocks and steers” from `aus_livestock`, Victorian Electricity Demand from `vic_elec`, and Gas production from `aus_production`.
+
+#### Question 3.3
+> Why is a Box-Cox transformation unhelpful for the `canadian_gas` data?
+
+#### Question 3.4
+> What Box-Cox transformation would you select for your retail data (from Exercise 7 in Section 2.10)?
+
+#### Question 3.5
+> For the following series, find an appropriate Box-Cox transformation to stabilise the variance: `Tobacco` from `aus_production`, `Economy` class passengers between Melbourne and Sydney from `ansett`, and `Pedestrian` counts at Southern Cross Station from `pedestrian`.
+
+#### Question 3.6
+> Consider the last five years of the Gas data from `aus_production`. Plot the time series. Use `seasonal_decompose` (multiplicative) to calculate trend-cycle and seasonal indices. Compute and plot seasonally adjusted data. Add an outlier and recompute.
+
+#### Question 3.7
+> Decompose your retail time series using the MSTL method. Does it reveal any outliers or unusual features?
+
+#### Question 3.8
+> Write about 3–5 sentences describing the results of the decomposition for the persons in the civilian labour force in Australia (Figures 3.13 and 3.14). Is the recession of 1991/1992 visible?
+
+### Chapter 4: Time Series Features
+
+#### Question 4.1
+> Write a function to compute the mean and standard deviation of a time series and apply it to the `PBS` data. Plot the series with the highest mean and the series with the lowest standard deviation.
+
+#### Question 4.2
+> Use `sns.pairplot()` to look at the relationships between the STL-based features for the holiday series in the `tourism` data. Which is the peak quarter for holidays in each state?
+
+#### Question 4.3
+> Use a feature-based approach to look for outlying series in the `PBS` data. What is unusual about the series you identify?
+
+## Grading Rubric
+- **Correctness (40%)**: Does the code run and produce the expected output?
+- **Code Quality (30%)**: Is the code clean, commented, and efficient?
+- **Analysis (30%)**: Are the interpretations and explanations clear and accurate?

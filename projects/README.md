@@ -1,0 +1,78 @@
+# Final Project Selection Guide
+
+
+## 🎯 Project Overview
+
+Instead of a generic forecasting project, you will select one of five
+specialized **Industry Tracks**. Each track represents a classic
+“high-stakes” forecasting problem encountered in the professional world.
+
+Your goal is to build a robust forecasting pipeline, ranging from EDA to
+advanced modeling, and communicate your findings in a professional memo.
+
+------------------------------------------------------------------------
+
+## 🏗️ The 5 Industry Tracks
+
+### 1. Energy: Grid Load Demand
+
+- **The Problem**: Predict hourly electricity consumption to help
+  utility companies maintain grid stability and manage costs.
+- **Detailed Guide**: [Track 1 Case
+  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_energy.qmd)
+- **Data Pointer**: [PJM Interconnection Hourly Load Data
+  (Kaggle)](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption)
+
+### 2. Finance: Returns & Risk (M6 Competition)
+
+- **The Problem**: Forecast monthly stock returns and volatility for a
+  basket of assets.
+- **Detailed Guide**: [Track 2 Case
+  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_finance.qmd)
+- **Data Pointer**: [M6 Financial Forecasting Competition
+  Data](https://m6competition.com/)
+
+### 3. Supply Chain: Intermittent Demand (M5 Competition)
+
+- **The Problem**: Forecast daily sales for Walmart products across
+  different departments and stores.
+- **Detailed Guide**: [Track 3 Case
+  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_supply_chain.qmd)
+- **Data Pointer**: [M5 Forecasting - Accuracy
+  (Kaggle)](https://www.kaggle.com/competitions/m5-forecasting-accuracy)
+
+### 4. Retail/Marketing: Promotion Analysis
+
+- **The Problem**: Forecast daily sales for European drug stores and
+  quantify the ROI of promotions.
+- **Detailed Guide**: [Track 4 Case
+  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_retail.qmd)
+- **Data Pointer**: [Rossmann Store Sales
+  (Kaggle)](https://www.kaggle.com/competitions/rossmann-store-sales)
+
+### 5. Economics: Macro-Indicator Forecasting
+
+- **The Problem**: Forecast the next 12 months of US Inflation (CPI) or
+  Unemployment for a policy briefing.
+- **Detailed Guide**: [Track 5 Case
+  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_economics.qmd)
+- **Data Pointer**: [FRED (Federal Reserve Economic
+  Data)](https://fred.stlouisfed.org/)
+
+------------------------------------------------------------------------
+
+## 📝 Deliverables (Common to all Tracks)
+
+Regardless of the track you choose, your submission must include: 1.
+**Professional Memo (PDF)**: A executive-level summary of your results.
+2. **Reproducible Code**: A `.qmd` or `.ipynb` file that executes the
+entire pipeline. 3. **Visualization**: Clear, branded charts showing
+your data, decomposition, and final forecasts.
+
+<div class="businessbox">
+
+**Pro Tip**: Choose the track that aligns with your career interests. If
+you want to work in Tech or E-commerce, the **M5 (Supply Chain)** track
+is highly valued by employers like Amazon and Walmart.
+
+</div>

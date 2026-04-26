@@ -1,0 +1,121 @@
+---
+title: "Lab 7: Deep Learning & Zero-Shot"
+subtitle: "DSE6066: Applied Business Forecasting"
+
+date: today
+format: 
+  html:
+    toc: true
+jupyter: python3
+---
+
+## 🛠️ Overview
+Train neural networks (NHITS) and use Pre-trained Foundation Models (TimeGPT) via `neuralforecast`.
+
+## Part 1: Self-Guided Exercises
+
+### Setup
+```{python}
+# !pip install neuralforecast datasetsforecast
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from neuralforecast import NeuralForecast
+from neuralforecast.models import MLP, LSTM
+
+# Generate synthetic data
+n_time = 100
+df = pd.DataFrame({
+    'unique_id': 1.0,
+    'ds': pd.date_range('2020-01-01', periods=n_time, freq='D'),
+    'y': np.sin(np.linspace(0, 10, n_time)) + np.random.normal(0, 0.1, n_time)
+})
+```
+
+### Exercise 1.1: Data Formatting for NeuralForecast
+**Instruction**: Ensure the `df` has the correct column names required by `neuralforecast` (`unique_id`, `ds`, `y`). If they were named differently, you would rename them. For this exercise, verify the types of `ds` (should be datetime) and `unique_id` (should be string or numeric). Assign the column names list to `cols`.
+
+```{python}
+# Your Code Here
+# cols = list(df.columns)
+```
+
+**Check your work**:
+```{python}
+try:
+    assert set(['unique_id', 'ds', 'y']).issubset(df.columns), "Missing required columns."
+    assert pd.api.types.is_datetime64_any_dtype(df['ds']), "ds must be datetime."
+    print("✅ Exercise 1.1 Passed!")
+except Exception as e:
+    print(f"❌ Exercise 1.1 Failed: {e}")
+```
+
+### Exercise 1.2: MLP Model Configuration
+**Instruction**: Configure an `MLP` model with an `h=12` (forecast horizon), `input_size=24` (lookback window), and `max_steps=100`. Assign the model instance to `mlp_model`.
+
+```{python}
+# Your Code Here
+# mlp_model = MLP(h=12, input_size=24, max_steps=100)
+```
+
+**Check your work**:
+```{python}
+try:
+    assert 'mlp_model' in locals(), "Variable 'mlp_model' missing."
+    assert mlp_model.h == 12, "Horizon should be 12."
+    print("✅ Exercise 1.2 Passed!")
+except Exception as e:
+    print(f"❌ Exercise 1.2 Failed: {e}")
+```
+
+### Exercise 1.3: NeuralForecast Engine
+**Instruction**: Create a `NeuralForecast` object containing your `mlp_model` and set the frequency `freq='D'`. Assign it to `nf`.
+
+```{python}
+# Your Code Here
+# nf = NeuralForecast(models=[mlp_model], freq='D')
+```
+
+**Check your work**:
+```{python}
+try:
+    assert 'nf' in locals(), "Variable 'nf' missing."
+    assert len(nf.models) == 1, "Should have one model."
+    print("✅ Exercise 1.3 Passed!")
+except Exception as e:
+    print(f"❌ Exercise 1.3 Failed: {e}")
+```
+
+## Part 2: Textbook & Module Exercises
+
+Complete the following exercises from *Forecasting: Principles and Practice, the Pythonic Way*.
+
+### Chapter 14: Neural Networks
+
+#### Question 14.1
+> Use the LSTM model to forecast 24-steps ahead for all the series in the `pedestrian` data set.
+
+#### Question 14.2
+> Consider the weekly data on US finished motor gasoline products supplied (`us_gasoline`).
+> - Use the MLP model to forecast the next 13 weeks of data.
+> - Repeat using the `AutoMLP` and the `AutoNHITS` models from `NeuralForecast`.
+> - Compare the accuracy of the models you generated.
+
+#### Question 14.3
+> Explain the role of "hidden layers" in a Multilayer Perceptron. How does increasing the number of layers affect model capacity and the risk of overfitting?
+
+### Chapter 15: Foundation Forecasting Models
+
+#### Question 15.1
+> Describe the "Zero-Shot" inference capability of foundation models like TimeGPT. How does it differ from traditional transfer learning?
+
+#### Question 15.2
+> If you have access to the Nixtla token, use `TimeGPT` to forecast the `AirPassengers` dataset. Compare the results with a Seasonal Naive benchmark.
+
+#### Question 15.3
+> What are the potential advantages of using a Foundation Model (like Chronos or TimesFM) over training a specific local model for a small dataset?
+
+## Grading Rubric
+- **Correctness (40%)**: Does the code run and produce the expected output?
+- **Code Quality (30%)**: Is the code clean, commented, and efficient?
+- **Analysis (30%)**: Are the interpretations and explanations clear and accurate?
