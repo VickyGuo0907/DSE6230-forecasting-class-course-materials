@@ -1,0 +1,12 @@
+---
+title: "Prophet Safety Checklist"
+categories: ["Tools", "Prophet", "Checklists"]
+---
+
+## Technical Checklist: Using "Prophet" Safely
+
+If using automated tools like Facebook Prophet, avoid the "Zillow Trap" with these checks:
+
+-   [ ] **The Residual Trick:** Use Prophet for the baseline (Trend/Seasonality), but train a separate ML model (XGBoost) to predict the errors (Residuals) based on complex features.
+-   [ ] **Stochastic Awareness:** Do not use Prophet for stock prices or crypto. These are random walks, not seasonal cycles. Prophet will confuse "momentum" with "trend" and buy at the top.
+-   [ ] **Manual Intervention:** During global shocks (Pandemics, Wars), use the "Holidays" or "Events" feature to flag the time period. Tell the model: *"Do not learn from this year; it is an anomaly."*

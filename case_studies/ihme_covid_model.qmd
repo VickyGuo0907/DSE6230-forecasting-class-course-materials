@@ -1,0 +1,30 @@
+---
+title: "IHME COVID Model"
+categories: ["Epidemiology", "Curve Fitting", "Mechanistic Models"]
+image: ../images/ihme_curve.png
+---
+
+## Curve Fitting vs. Reality
+
+![Asymmetry: Epidemics rise fast but fall slow](../images/ihme_curve.png){fig-align="center"}
+
+### The Failure: Curve Fitting
+In March 2020, the White House relied heavily on a model from the **IHME** (University of Washington). This model predicted the peak of the pandemic and the subsequent decline.
+
+*   **Methodology:** It was a statistical model that took the shape of the death curve in Wuhan and "fitted" it to US data using a Gaussian (Normal) function.
+*   **Assumption:** **Symmetry** (Farr's Law). The model assumed that the decline in cases would be the mirror image of the rise. "What goes up fast, comes down fast."
+
+### The Reality: The Long Tail
+Viral spread does not obey geometry; it obeys biology and sociology.
+
+1.  **Asymmetry:** Once a virus is widespread, it burns out slowly. The decline is almost always slower than the rise (a "fat tail" or log-normal distribution).
+2.  **Mitigation:** The US did not have the same strict lockdown as Wuhan.
+3.  **Result:** The IHME model consistently predicted the pandemic would "end" weeks before it actually did. It underestimated total deaths significantly in the early months because it forced the data into a symmetrical shape (Farr's Law) that didn't exist.
+
+### The Lesson
+**Mechanistic Models > Curve Fitting.**
+For complex systems (biology, economics), drawing a line through dots is dangerous. You need a **Mechanistic Model** (like **SEIR**: Susceptible-Exposed-Infected-Recovered) that simulates the *process* of transmission, not just the *shape* of the graph.
+
+### References
+*   [Why the IHME Model failed](https://www.statnews.com/2020/04/17/influential-covid-19-model-uses-flawed-methods-shouldnt-guide-policies-critics-say/) (STAT News)
+*   Jewell, N. P., Lewnard, J. A., & Jewell, B. L. (2020). *Predictive Mathematical Models of the COVID-19 Pandemic*. JAMA.

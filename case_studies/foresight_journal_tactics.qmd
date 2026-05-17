@@ -1,0 +1,59 @@
+---
+title: "Practitioner Tactics"
+categories: ["Strategy", "Best Practices", "Foresight Journal"]
+---
+
+## Insights from *Foresight* Journal
+
+*Foresight: The International Journal of Applied Forecasting* bridges the gap between academic theory and corporate reality. Here are 8 key tactics derived from practitioner literature.
+
+### 1. The "Do Nothing" Baseline (FVA)
+**Forecast Value Added (FVA)** analysis asks: "Did your effort improve the accuracy?"
+
+*   Step 1: Calculate error of a naive forecast (e.g., Use "Last Year's numbers").
+*   Step 2: Calculate error of the Analyst's forecast.
+*   **Rule:** If the Analyst's error > Naive error, **stop forecasting.** Just use the naive method. Approximately 30-50% of manual adjustments *harm* accuracy.
+
+### 2. The Bullwhip Fix
+Manufacturers often forecast "Shipments" (what they send to Walmart). This is a mistake.
+
+*   Shipments are lumpy (ordered in pallets).
+*   **Fix:** Forecast **Point-of-Sale (POS)** consumption (what people actually buy), which is smooth. Then calculate shipments backwards based on inventory targets.
+
+### 3. Leading Indicators
+Google Trends is a "Lead" indicator; Sales are a "Lag" indicator.
+
+*   For a new iPhone launch, search volume spikes 2 weeks before sales.
+*   Use Search Volume as a feature to predict the *turning point* of a trend.
+
+### 4. Bifurcate Demand
+Never forecast "Total Sales" if you have promotions.
+*   **Split the signal:**
+    1.  **Baseline Demand:** The boring, recurring volume.
+    2.  **Promo Lift:** The extra volume due to a 50% off sale.
+*   If you mix them, the model thinks the "Promo Spike" is a seasonal trend and will predict it again next year even if there is no sale.
+
+### 5. Aggregation Rule
+Forecasts are always more accurate at higher levels.
+*   Forecasting "Red 12oz Cups" is hard (high variance).
+*   Forecasting "All Cups" is easy (variance cancels out).
+*   **Hierarchy:** Forecast at the *Category* or *Family* level for production planning. Only disaggregate to SKU level at the very last moment for shipping.
+
+### 6. Crowd vs. Expert
+**Prediction Markets:** Internal betting markets (where employees bet virtual currency on sales outcomes) often beat the HipPo (Highest Paid Person's Opinion).
+*   Why? Because the Sales Guy knows the client is broke, but he won't tell the CEO in a meeting. He *will* bet against the forecast to make money.
+
+### 7. Incentive Bias
+Sales teams are paid to hit quotas.
+*   **Sandbagging:** They will forecast *low* so they can easily beat the target and get a bonus.
+*   **Solution:** Separate the **Financial Plan** (Goal) from the **Demand Forecast** (Best Guesses). Never let the Sales quota be the inventory number.
+
+### 8. The "Killer" Variable
+Trend lines fail when technology changes.
+*   Example: Kodak film sales. A time series model would predict "steady decline."
+*   Reality: "Cliff drop."
+*   **Tactic:** Identify structural breaks (e.g., New Competitor, Regulatory Change) that decouple historical correlations.
+
+### References
+*   [Foresight: The International Journal of Applied Forecasting](https://forecast.org/foresight-home/)
+*   Gilliland, M. (2010). *The Business Forecasting Deal*. (The Bible of FVA).

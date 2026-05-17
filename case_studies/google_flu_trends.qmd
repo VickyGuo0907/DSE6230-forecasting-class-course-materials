@@ -1,0 +1,30 @@
+---
+title: "Google Flu Trends"
+categories: ["Big Data", "Overfitting", "Correlation vs Causation"]
+image: ../images/google_flu_chart.png
+---
+
+## Overfitting in Big Data
+
+![Model Overestimation: Spurious correlations lead to massive errors](../images/google_flu_chart.png){fig-align="center"}
+
+### The Trap: Big Data Hubris
+Launched in 2008, **Google Flu Trends (GFT)** attempted to predict influenza outbreaks by aggregating search queries. The premise was elegant: people search for "flu symptoms" before they go to the doctor, giving Google a real-time lead over the CDC (which had a ~2 week lag).
+
+Google's engineers let the data speak. They threw 50 million search terms at the CDC data and found the top 45 terms that correlated most strongly.
+
+*   **The Problem:** They found *correlation*, not *causation*.
+*   **Correlated Terms:** Terms like "high school basketball" were strongly correlated because basketball season coincides with flu season (Winter). But basketball does not cause the flu. This is **Overfitting**.
+
+### The Failure: Spurious Correlations & Algorithm Changes
+1.  **Search Behavior Changed:** In 2012, Google introduced "Auto-Suggest." If a user typed "cough," Google might suggest "cough medicine," altering user behavior. The model, trained on old search habits, broke.
+2.  **The "Peak" Failure:** In the 2012-2013 flu season, GFT predicted widespread severe outbreaks. In reality, it was a moderate season. GFT over-predicted actual cases by **more than 50%**.
+3.  **Missing the Pandemic:** Conversely, it completely missed the 2009 H1N1 pandemic because that outbreak happened out of season (Summer), where "high school basketball" correlations didn't apply.
+
+### The Lesson
+**Correlation $\neq$ Causation.**
+"Big Data" does not fix bad logic. Without a causal link (or "mechanistic" understanding), ML models are just finding coincidences in history that may not repeat.
+
+### References
+*   Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). **The Parable of Google Flu Trends: Traps in Big Data Analysis**. *Science*. [Link to Paper](https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf)
+*   [Google Flu Trends: The Limits of Big Data](https://www.theguardian.com/technology/2014/mar/27/google-flu-trends-big-data-problems) (The Guardian)

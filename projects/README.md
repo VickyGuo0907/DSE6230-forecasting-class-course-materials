@@ -18,8 +18,7 @@ advanced modeling, and communicate your findings in a professional memo.
 
 - **The Problem**: Predict hourly electricity consumption to help
   utility companies maintain grid stability and manage costs.
-- **Detailed Guide**: [Track 1 Case
-  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_energy.qmd)
+- **Detailed Guide**: [Track 1 Case Study](track_energy.qmd)
 - **Data Pointer**: [PJM Interconnection Hourly Load Data
   (Kaggle)](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption)
 
@@ -27,8 +26,7 @@ advanced modeling, and communicate your findings in a professional memo.
 
 - **The Problem**: Forecast monthly stock returns and volatility for a
   basket of assets.
-- **Detailed Guide**: [Track 2 Case
-  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_finance.qmd)
+- **Detailed Guide**: [Track 2 Case Study](track_finance.qmd)
 - **Data Pointer**: [M6 Financial Forecasting Competition
   Data](https://m6competition.com/)
 
@@ -36,8 +34,7 @@ advanced modeling, and communicate your findings in a professional memo.
 
 - **The Problem**: Forecast daily sales for Walmart products across
   different departments and stores.
-- **Detailed Guide**: [Track 3 Case
-  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_supply_chain.qmd)
+- **Detailed Guide**: [Track 3 Case Study](track_supply_chain.qmd)
 - **Data Pointer**: [M5 Forecasting - Accuracy
   (Kaggle)](https://www.kaggle.com/competitions/m5-forecasting-accuracy)
 
@@ -45,8 +42,7 @@ advanced modeling, and communicate your findings in a professional memo.
 
 - **The Problem**: Forecast daily sales for European drug stores and
   quantify the ROI of promotions.
-- **Detailed Guide**: [Track 4 Case
-  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_retail.qmd)
+- **Detailed Guide**: [Track 4 Case Study](track_retail.qmd)
 - **Data Pointer**: [Rossmann Store Sales
   (Kaggle)](https://www.kaggle.com/competitions/rossmann-store-sales)
 
@@ -54,8 +50,7 @@ advanced modeling, and communicate your findings in a professional memo.
 
 - **The Problem**: Forecast the next 12 months of US Inflation (CPI) or
   Unemployment for a policy briefing.
-- **Detailed Guide**: [Track 5 Case
-  Study](file:///c:/Users/chris/Documents/forecasting-class/projects/track_economics.qmd)
+- **Detailed Guide**: [Track 5 Case Study](track_economics.qmd)
 - **Data Pointer**: [FRED (Federal Reserve Economic
   Data)](https://fred.stlouisfed.org/)
 

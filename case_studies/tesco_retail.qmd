@@ -1,0 +1,34 @@
+---
+title: "Tesco Retail Forecasting"
+categories: ["Retail", "Exogenous Variables", "Weather"]
+image: ../images/tesco_weather.jpg
+---
+
+## Adding Exogenous Variables
+
+### The Win
+For years, grocery giant **Tesco** forecasted sales using standard univariate time series methods (Arima, Exponential Smoothing) based on past sales history.
+
+*   **Problem:** These models failed spectacularly on random sunny weekends. Why? Because people buy BBQ meat and salads when it's hot, and soup when it's cold. Past sales (last week) don't predict next week's weather.
+
+**The Fix:** Tesco integrated **Exogenous Variables** (External Regressors) into their forecast models. Specifically:
+
+1.  Temperature forecasts
+2.  Hours of sunshine
+3.  Rainfall probability
+
+### The Result
+*   They discovered a **"Salad Effect"**: A specific temperature threshold where salad sales jump **42%**.
+*   By feeding weather forecasts into the demand model, they could ship extra inventory *before* the heatwave hit.
+*   **Impact:** Massive reduction in food waste (perishables) and lost revenue (Out-of-Stocks). Tesco achieved a **45% reduction in food waste** across operations.
+
+### The Lesson
+**Multivariate Forecasting.**
+History sets the baseline, but the *environment* sets the variance.
+
+*   **Univariate (History only):** "I sold 100 units last Tuesday, so I'll sell 100 next Tuesday."
+*   **Multivariate (History + Context):** "I sold 100 units last Tuesday, but next Tuesday is 10° warmer, so I will sell 140."
+
+### References
+*   [Tesco Plc. Food Waste Report](https://www.tescoplc.com/sustainability/planet/food-waste/)
+*   [Tesco uses weather to predict sales](https://www.marketingweek.com/tesco-uses-weather-to-predict-sales/)
