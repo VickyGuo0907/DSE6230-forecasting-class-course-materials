@@ -1,6 +1,6 @@
 ---
 title: "Lab 6: Probabilistic Forecasting & Risk"
-subtitle: "DSE6066: Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 
 due-date: "August 18, 2026"
 format:

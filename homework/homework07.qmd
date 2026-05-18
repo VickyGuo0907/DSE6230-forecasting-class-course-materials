@@ -1,6 +1,6 @@
 ---
 title: "Lab 7: Deep Learning & Zero-Shot"
-subtitle: "DSE6066: Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 
 date: today
 format: 

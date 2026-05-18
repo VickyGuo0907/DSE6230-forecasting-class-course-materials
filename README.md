@@ -1,6 +1,6 @@
 # Forecasting Class — Code & Assignments
 
-Student-facing code repository for **DSE6066: Applied Business Forecasting**.
+Student-facing code repository for **DSE6230: Forecasting Methods and Applications**.
 Lecture pages, slides, and the syllabus live in Canvas; the runnable code,
 homework, and project guides live here.
 

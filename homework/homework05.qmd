@@ -1,6 +1,6 @@
 ---
 title: "Lab 5: Deep Learning & Global Models"
-subtitle: "DSE6066: Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 due-date: "2026-06-10"
 format: 
   html:

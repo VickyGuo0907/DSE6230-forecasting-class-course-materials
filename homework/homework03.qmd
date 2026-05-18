@@ -1,6 +1,6 @@
 ---
 title: "Lab 3: Statistical Models (ETS & ARIMA)"
-subtitle: "DSE6066: Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 date: "2026-05-20"
 format: 
   html:

@@ -1,6 +1,6 @@
 ---
 title: "Final Project: Industry Tracks"
-subtitle: "Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 format:
   html:
     toc: true

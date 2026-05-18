@@ -1,6 +1,6 @@
 ---
 title: "Project Track: Economic Indicator Forecasting"
-subtitle: "DSE6066: Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 format:
   pdf:
     documentclass: article

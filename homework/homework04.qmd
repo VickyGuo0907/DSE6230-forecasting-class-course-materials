@@ -1,6 +1,6 @@
 ---
 title: "Lab 4: Machine Learning for Forecasting"
-subtitle: "DSE6066: Applied Business Forecasting"
+subtitle: "DSE6230: Forecasting Methods and Applications"
 due-date: "2026-06-03"
 format: 
   html:
