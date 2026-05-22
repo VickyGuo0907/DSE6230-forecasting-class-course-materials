@@ -9,7 +9,7 @@ format:
 jupyter: python3
 ---
 
-## 🛠️ Overview
+## Overview
 In this lab, you will master classical statistical forecasting frameworks. You will move beyond visual inspection to use formal tests for stationarity and implement ETS and ARIMA models using `statsmodels` and `nixtla`.
 
 1.  **Stationarity Testing**: Using the Augmented Dickey-Fuller (ADF) test.
@@ -54,9 +54,9 @@ print(f"ADF P-value: {p_val:.4f}")
 #| echo: true
 try:
     assert p_val > 0.05, "The CO2 data is non-stationary; p-value should be high."
-    print("✅ Exercise 1.1 Passed!")
+    print(" Exercise 1.1 Passed!")
 except AssertionError as e:
-    print(f"❌ Exercise 1.1 Failed: {e}")
+    print(f" Exercise 1.1 Failed: {e}")
 ```
 
 ### Exercise 1.2: Exponential Smoothing (ETS)
@@ -79,9 +79,9 @@ et_model = ExponentialSmoothing(
 try:
     assert ets_model.model.trend == 'add', "Trend should be additive"
     assert ets_model.model.seasonal == 'add', "Seasonality should be additive"
-    print("✅ Exercise 1.2 Passed!")
+    print(" Exercise 1.2 Passed!")
 except AssertionError as e:
-    print(f"❌ Exercise 1.2 Failed: {e}")
+    print(f" Exercise 1.2 Failed: {e}")
 ```
 
 ### Exercise 1.3: SARIMA Modeling
@@ -100,9 +100,9 @@ sarima_result = model.fit(disp=False)
 try:
     assert sarima_result.specification['order'] == (1, 1, 1), "ARIMA order is incorrect"
     assert sarima_result.specification['seasonal_order'] == (1, 1, 1, 12), "Seasonal order is incorrect"
-    print("✅ Exercise 1.3 Passed!")
+    print(" Exercise 1.3 Passed!")
 except AssertionError as e:
-    print(f"❌ Exercise 1.3 Failed: {e}")
+    print(f" Exercise 1.3 Failed: {e}")
 ```
 
 ---
@@ -112,7 +112,7 @@ except AssertionError as e:
 Complete the following exercises from *fpppy Chapter 8 and 9*.
 
 ### Question 8.1
-> Apply Holt’s linear method to the `co2` data. Experiment with different values of $\alpha$ and $\beta$. What happens to the forecasts as these parameters change?
+> Apply Holt's linear method to the `co2` data. Experiment with different values of $\alpha$ and $\beta$. What happens to the forecasts as these parameters change?
 
 ```{python}
 # Your code here

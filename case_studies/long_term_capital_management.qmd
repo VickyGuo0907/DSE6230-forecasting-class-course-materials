@@ -9,7 +9,7 @@ image: ../images/fat_tail_distribution.png
 ![The Black Swan: Normal distributions underestimate extreme events](../images/fat_tail_distribution.png){fig-align="center"}
 
 ### The Trap: The Normality Assumption
-Long-Term Capital Management (LTCM) was a hedge fund run by "geniuses"—two Nobel Prize winners (Merton and Scholes) and Wall Street veterans.
+Long-Term Capital Management (LTCM) was a hedge fund run by "geniuses"-two Nobel Prize winners (Merton and Scholes) and Wall Street veterans.
 
 *   **Strategy:** Arbitrage. They would find two assets that should be the same price (e.g., US Treasury bonds vs. Italian Government bonds) but had drifted apart. They bet they would converge.
 *   **The Model:** They used Value-at-Risk (VaR) models based on the **Normal Distribution** (Bell Curve). These models said that a "5-Sigma" event (a market move 5 standard deviations from the mean) would happen once every 7,000 years.

@@ -9,7 +9,7 @@ format:
 jupyter: python3
 ---
 
-## 🛠️ Overview
+## Overview
 Practice decomposing Time Series into Trend, Seasonal, and Residual components.
 
 ## Part 1: Self-Guided Exercises
@@ -43,9 +43,9 @@ airline.index.freq = 'MS' # Monthly start
 try:
     assert 'decomp_mult' in locals(), "Variable 'decomp_mult' missing."
     assert decomp_mult.model == 'multiplicative', "Model should be multiplicative."
-    print("✅ Exercise 1.1 Passed!")
+    print(" Exercise 1.1 Passed!")
 except Exception as e:
-    print(f"❌ Exercise 1.1 Failed: {e}")
+    print(f" Exercise 1.1 Failed: {e}")
 ```
 
 ### Exercise 1.2: MSTL Decomposition
@@ -61,9 +61,9 @@ except Exception as e:
 try:
     assert 'mstl_fit' in locals(), "Variable 'mstl_fit' missing."
     assert hasattr(mstl_fit, 'seasonal'), "Result should have seasonal component."
-    print("✅ Exercise 1.2 Passed!")
+    print(" Exercise 1.2 Passed!")
 except Exception as e:
-    print(f"❌ Exercise 1.2 Failed: {e}")
+    print(f" Exercise 1.2 Failed: {e}")
 ```
 
 ### Exercise 1.3: Feature Extraction (Strength of Trend)
@@ -83,9 +83,9 @@ Assign the result to `trend_strength`.
 try:
     assert 'trend_strength' in locals(), "Variable 'trend_strength' missing."
     assert 0 <= trend_strength <= 1, "Strength should be between 0 and 1."
-    print(f"✅ Exercise 1.3 Passed! Trend Strength: {trend_strength:.4f}")
+    print(f" Exercise 1.3 Passed! Trend Strength: {trend_strength:.4f}")
 except Exception as e:
-    print(f"❌ Exercise 1.3 Failed: {e}")
+    print(f" Exercise 1.3 Failed: {e}")
 ```
 
 ## Part 2: Textbook Exercises
@@ -98,7 +98,7 @@ Complete the following exercises from *Forecasting: Principles and Practice, the
 > Consider the GDP information in `global_economy`. Plot the GDP per capita for each country over time. Which country has the highest GDP per capita? How has this changed over time?
 
 #### Question 3.2
-> For each of the following series, make a graph of the data. If transforming seems appropriate, do so and describe the effect: United States GDP from `global_economy`, Slaughter of Victorian “Bulls, bullocks and steers” from `aus_livestock`, Victorian Electricity Demand from `vic_elec`, and Gas production from `aus_production`.
+> For each of the following series, make a graph of the data. If transforming seems appropriate, do so and describe the effect: United States GDP from `global_economy`, Slaughter of Victorian "Bulls, bullocks and steers" from `aus_livestock`, Victorian Electricity Demand from `vic_elec`, and Gas production from `aus_production`.
 
 #### Question 3.3
 > Why is a Box-Cox transformation unhelpful for the `canadian_gas` data?
@@ -116,7 +116,7 @@ Complete the following exercises from *Forecasting: Principles and Practice, the
 > Decompose your retail time series using the MSTL method. Does it reveal any outliers or unusual features?
 
 #### Question 3.8
-> Write about 3–5 sentences describing the results of the decomposition for the persons in the civilian labour force in Australia (Figures 3.13 and 3.14). Is the recession of 1991/1992 visible?
+> Write about 3-5 sentences describing the results of the decomposition for the persons in the civilian labour force in Australia (Figures 3.13 and 3.14). Is the recession of 1991/1992 visible?
 
 ### Chapter 4: Time Series Features
 

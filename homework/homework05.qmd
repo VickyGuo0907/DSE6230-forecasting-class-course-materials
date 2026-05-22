@@ -9,7 +9,7 @@ format:
 jupyter: python3
 ---
 
-## 🛠️ Overview
+## Overview
 In this lab, you will explore **Global Models** using `neuralforecast`. You will train a single Deep Learning model (N-BEATS or NHITS) across multiple time series simultaneously.
 
 1.  **Data Prep**: Loading Panel Data (Long format).

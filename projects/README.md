@@ -1,18 +1,18 @@
 # Final Project Selection Guide
 
 
-## 🎯 Project Overview
+## Project Overview
 
 Instead of a generic forecasting project, you will select one of five
 specialized **Industry Tracks**. Each track represents a classic
-“high-stakes” forecasting problem encountered in the professional world.
+"high-stakes" forecasting problem encountered in the professional world.
 
 Your goal is to build a robust forecasting pipeline, ranging from EDA to
 advanced modeling, and communicate your findings in a professional memo.
 
 ------------------------------------------------------------------------
 
-## 🏗️ The 5 Industry Tracks
+## The 5 Industry Tracks
 
 ### 1. Energy: Grid Load Demand
 
@@ -56,7 +56,7 @@ advanced modeling, and communicate your findings in a professional memo.
 
 ------------------------------------------------------------------------
 
-## 📝 Deliverables (Common to all Tracks)
+## Deliverables (Common to all Tracks)
 
 Regardless of the track you choose, your submission must include: 1.
 **Professional Memo (PDF)**: A executive-level summary of your results.

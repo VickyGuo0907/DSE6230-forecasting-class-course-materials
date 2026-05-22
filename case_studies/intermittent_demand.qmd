@@ -7,7 +7,7 @@ format:
     theme: cosmo
 ---
 
-# 🛑 The Problem: When "Average" is Wrong
+# The Problem: When "Average" is Wrong
 
 In many supply chains (especially for spare parts or heavy machinery), sales do not happen every day. You might sell 5 units on Tuesday, then nothing for two weeks, then 3 units.
 
@@ -27,7 +27,7 @@ We use two metrics to classify the series (Syntetos & Boylan categorization):
 
 ---
 
-# 🛠 Approaches to Intermittent Forecasting
+# Approaches to Intermittent Forecasting
 
 ## 1. Croston's Method (The Classic)
 Instead of forecasting "Demand at time $t$", Croston splits the problem into two separate forecasts:
@@ -47,7 +47,7 @@ Croston's method is known to be slightly biased (it over-forecasts). SBA applies
 
 ---
 
-# 📊 Performance Measures for Sparse Data
+# Performance Measures for Sparse Data
 
 Standard metrics like **MAPE** are useless here because you cannot divide by zero.
 
@@ -62,7 +62,7 @@ If you are holding safety stock, you care about the **95th percentile** of deman
 
 ---
 
-# 💻 Code Example (StatsForecast)
+# Code Example (StatsForecast)
 
 ```python
 from statsforecast.models import Croston, ADIDA, IMAPA

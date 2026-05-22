@@ -12,7 +12,7 @@ image: ../images/zillow_model_chart.png
 Zillow, the real estate tech giant, launched **Zillow Offers**, an "iBuying" program where algorithms would instantly value a home, make a cash offer, and buy it to flip for a profit. The core of this operation was the "Zestimate," a machine learning model (likely an ensemble involving time-series components like Prophet or similar auto-regressive logic) designed to predict future home prices.
 
 ### The Trap: Regime Change
-The model was trained primarily on data from the COVID-19 housing boom (2020-2021). During this period, home prices followed a strong, consistent upward trend—a **linear or exponential growth regime**.
+The model was trained primarily on data from the COVID-19 housing boom (2020-2021). During this period, home prices followed a strong, consistent upward trend-a **linear or exponential growth regime**.
 
 *   **Assumption:** The model implicitly assumed this trend was a permanent feature of the market ("stationarity" of the trend).
 *   **Reality:** In late 2021, the market cooled due to rising potential for interest rate hikes and buyer fatigue. The trend flattened.
@@ -23,7 +23,7 @@ When the market turned, the algorithms did not adapt quickly enough (a phenomeno
 2.  **Adverse Selection:** Sellers with "lemons" (homes with hidden flaws) or those who knew the market was softening flocked to Zillow's inflated offers.
 3.  **Result:** Zillow purchased thousands of homes at the very top of the market. When they went to resell, they faced a loss on every unit.
 
-> "Fundamentally, we have been unable to predict future pricing of homes to a level of accuracy that makes this a safe business to be in." — *Rich Barton, Zillow CEO*
+> "Fundamentally, we have been unable to predict future pricing of homes to a level of accuracy that makes this a safe business to be in." - *Rich Barton, Zillow CEO*
 
 **Correction:** Zillow shut down the division, took a **$304 million write-down** in Q3 2021 alone, and laid off 25% of its workforce.
 

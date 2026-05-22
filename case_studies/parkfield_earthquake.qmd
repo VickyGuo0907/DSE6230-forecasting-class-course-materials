@@ -26,7 +26,7 @@ The dates came and went.
 *   1993: No quake.
 *   2000: No quake.
 
-The earthquake finally arrived in **2004**—11 years late.
+The earthquake finally arrived in **2004**-11 years late.
 
 ### The Lesson
 **Time is not a cause.**

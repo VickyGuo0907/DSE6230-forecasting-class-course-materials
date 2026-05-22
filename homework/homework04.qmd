@@ -9,7 +9,7 @@ format:
 jupyter: python3
 ---
 
-## 🛠️ Overview
+## Overview
 This lab focuses on using Machine Learning (XGBoost/LightGBM) and Facebook Prophet for forecasting. You will use `mlforecast` and `statsforecast` from Nixtla.
 
 1.  **Feature Engineering**: Lags, Rolling Windows, Date Features.

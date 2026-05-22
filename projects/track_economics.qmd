@@ -7,21 +7,21 @@ format:
     geometry: margin=1in
 ---
 
-## 🏛️ Business Context
+## Business Context
 Macroeconomic stability is the backdrop for all business planning. Banks, insurance companies, and government agencies rely on forecasts of **Inflation** and **Economic Growth** to set interest rates, pricing, and policy. This track focuses on the "Big Picture" of the economy.
 
-## 📊 The Data
+## The Data
 You will use the **FRED (Federal Reserve Economic Data)** database, the gold standard for economic research.
 - **Source**: [FRED API or Database](https://fred.stlouisfed.org/)
 - **Target Series**: Consumer Price Index (CPI `CPIAUCSL`) or Unemployment Rate (`UNRATE`).
 
-## 🛠️ Technical Requirements
+## Technical Requirements
 In addition to the core project requirements, your analysis must address:
 1.  **Unit Roots & Differencing**: Economic series are notoriously non-stationary. You must use **ADF tests** and interpret the "Integration" order ($d$) carefully.
 2.  **Leading Indicators**: Can the "Yield Curve" (Spread between 10yr and 2yr bonds) predict future unemployment? Try to find a **Leading Indicator** in FRED to use as a regressor.
 3.  **Low Frequency High Stakes**: Economic data is often monthly or quarterly. This means "Sample Size" is small ($N < 500$), making model over-fitting a major risk.
 
-## 📑 Professional References
+## Professional References
 - [fpppy: Stationarity and Differencing](https://otexts.com/fpppy/nbs/09-arima.html#stationarity-and-differencing)
 - [FRED St. Louis: Guide to Economic Data](https://fredhelp.stlouisfed.org/)
 
