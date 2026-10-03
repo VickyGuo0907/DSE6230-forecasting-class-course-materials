@@ -27,3 +27,5 @@ data/
 *.env
 .env.*
 *.key
+lightning_logs/
+notebooks/lightning_logs/
